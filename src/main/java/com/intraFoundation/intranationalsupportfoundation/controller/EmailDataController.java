@@ -1,7 +1,7 @@
-package com.intraFoundation.intranationalsupportfoundation.model.controller;
+package com.intraFoundation.intranationalsupportfoundation.controller;
 
-import com.intraFoundation.intranationalsupportfoundation.model.repository.model.EmailData;
-import com.intraFoundation.intranationalsupportfoundation.model.repository.EmailDataRepository;
+import com.intraFoundation.intranationalsupportfoundation.repository.model.EmailDataEntity;
+import com.intraFoundation.intranationalsupportfoundation.repository.EmailDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,11 +17,11 @@ public class EmailDataController {
         this.emailDataRepository = emailDataRepository;
     }
     @PostMapping
-    public EmailData saveEmailData(@RequestBody EmailData emailData){
+    public EmailDataEntity saveEmailData(@RequestBody EmailDataEntity emailData){
         return emailDataRepository.save(emailData);
     }
     @GetMapping("/{id}")
-    public Optional<EmailData> getEmailById(@PathVariable Long id){
+    public Optional<EmailDataEntity> getEmailById(@PathVariable Long id){
       return emailDataRepository.findById(id);
     }
 }

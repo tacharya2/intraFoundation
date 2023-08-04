@@ -1,4 +1,4 @@
-package com.intraFoundation.intranationalsupportfoundation.model.repository.model;
+package com.intraFoundation.intranationalsupportfoundation.repository.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -6,7 +6,8 @@ import lombok.Data;
 
 @Data
 @Entity
-public class EmailData {
+@Table(name="email_data")
+public class EmailDataEntity {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
