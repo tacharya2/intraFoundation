@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 //@Configuration
 @OpenAPIDefinition(
         info = @Info(
-                title = "IntraFoundation Contact Form",
+                title = "IntraFoundation Swagger",
                 description = "This API is used to post and retrieve correspondence via web",
                 version = "v1",
                 contact = @Contact(name = "Tek Acharya", email = "sarmakash430@gmail.com")
@@ -16,3 +16,4 @@ import org.springframework.context.annotation.Configuration;
 )
 public class SwaggerConfig {
 }
+
