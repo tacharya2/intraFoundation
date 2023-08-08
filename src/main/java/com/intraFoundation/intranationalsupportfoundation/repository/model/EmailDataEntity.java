@@ -1,6 +1,6 @@
 package com.intraFoundation.intranationalsupportfoundation.repository.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+//import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -10,8 +10,9 @@ import javax.validation.constraints.NotNull;
 /*****************************************************************
 Lesson Learned:
  1. Swagger won't work if you use jakarta.persistence.* using parent <version>2.5.4</version> and javax persistence works.
- 2. We can Make dto and entity class the same. In this project, the Swagger wasn't detecting schema from dto, so I moved it to entity and it showed up in Swagger
-
+ 3. We can Make dto and entity class the same. In this project, the Swagger wasn't detecting schema from dto, so I moved it to entity, and it showed up in Swagger
+ 4. When sending data from the client-side i.e. dataToSend {  lastName: lastName}, the first one should match the POJO attribute and second
+    should match the state attribute. If not, data won't be mapped.
  ******************************************************************/
 @Data
 @Entity
